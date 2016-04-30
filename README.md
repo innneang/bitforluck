@@ -4,11 +4,7 @@ Use to calculate the electricity bill of the bitcoin miner machine
 
 ## Installation
 
-Describe the installation process
-
-## Usage
-
-Write usage instructions
+Just clone this repo and you are ready to go!.
 
 ## Contributing
 
@@ -20,15 +16,8 @@ Write usage instructions
 
 ## History
 
-TODO: Write history
+30/4/16: Uploaded to master. Everything work fine.
 
 ## Credits
 
-TODO: Write credits
-
-## License
-
-TODO: Write license
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
+Built with love  by @innneang
