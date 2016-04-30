@@ -1,14 +1,14 @@
 # Bitforluck
 
-TODO: Use to calculate the electricity bill of the bitcoin miner machine
+Use to calculate the electricity bill of the bitcoin miner machine
 
 ## Installation
 
-TODO: Describe the installation process
+Describe the installation process
 
 ## Usage
 
-TODO: Write usage instructions
+Write usage instructions
 
 ## Contributing
 
