@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='/prajadfont/stylesheet.css' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <meta charset='utf-8'>
+    <title>CPU | โปรแกรมคำนวณค่าไฟฟ้า Bitcoin</title>
+</head>
+<body>
+    <div class='container'>
+        <div class='row'>
+        <div class='col-md-8 col-md-offset-2'>
+            <ul class="nav nav-pills">
+                <li role="presentation"><a href="index.html">เน้นการ์ดจอ</a></li>
+                <li role="presentation" class='active'><a href="cpu.html">เน้น CPU</a></li>
+                <li role="presentation"><a href="asic.html">เครื่อง ASIC</a></li>
+                <li rele='presentation'><a href='howto.html'>วิธีใช้</a></li>
+            </ul>
+        <h1>โปรแกรมคำนวณค่าไฟฟ้า Bitcoin by @innneang</h1>
+            <form>
+            <div class='form-group'>
+            <div class='row'>
+                <div class='addtothis'>
+                    <div class='col-md-6'>
+                        <select id='card' class="cards form-control">
+                            <option disabled selected>รุ่น CPU</option>
+                            <option disabled>Intel Socket 1151</option>
+                            <option value='91'>Core i7	6700K	</option>
+                            <option value='65'>Core i7	6700	</option>
+                            <option value='35'>Core i7	6700T	</option>
+                            <option value='91'>Core i5	6600K	</option>
+                            <option value='65'>Core i5	6600	</option>
+                            <option value='65'>Core i5	6500	</option>
+                            <option value='65'>Core i5	6402P	</option>
+                            <option value='65'>Core i5	6400	</option> 
+                            <option value='51'>Corei3	6320	</option> 
+                            <option value='51'>Corei3	6300	</option> 
+                            <option value='51'>Corei3	6100	</option>
+                            <option value='35'>Corei3	6300T	</option>
+                            <option value='35'>Corei3	6100T	</option>
+                            <option value='54'>Corei3	6098P	</option>
+                            <option value='51'>Pentium	G4520	</option>
+                            <option value='51'>Pentium	G4500	</option>
+                            <option value='35'>Pentium	G4500T	</option>
+                            <option value='54'>Pentium	G4400	</option>
+                            <option value='35'>Pentium	G4400T	</option>
+                            <option value='35'>Pentium	G4400TE	</option>
+                            <option value='51'>Celeron	G3920	</option>
+                            <option value='51'>Celeron	G3900	</option>
+                            <option value='35'>Celeron	G3900TE	</option>
+                        </select>
+                    </div>
+                    <div class='col-md-6'>
+                        <div class='form-group'>
+                            <div class="input-group">
+                                <input type="text" class="form-control amount" id="amount" placeholder="จำนวนการ์ดจอ">
+                                <div class="input-group-addon">ใบ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class='col-md-6'>
+                        <div class='form-group'>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="hourperday" placeholder="เวลาที่เปิดใน 1 วัน">
+                                <div class="input-group-addon">ชั่วโมง</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-md-6'>
+                        <button type='button' id='addappend' class='btn btn-default'>เพิ่ม <span class='glyphicon glyphicon-plus'></span></button>        
+                    </div>
+                </div>
+                                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">ส่วนประกอบอื่นๆของคอมพิวเตอร์</h3>
+                      </div>
+                  <div class="panel-body">
+                    <div class='row'>
+                        <div class='col-md-6'>
+                            <select id='mainboardo' class='form-control'>
+                                <option disabled selected>รุ่นเมนบอร์ด</option>
+                                <option value='32.5'>Regular Motherboard</option>
+                                <option value='62.5'>High End Motherboard</option>
+                            </select>
+                        </div>
+                        <div class='col-md-6'>
+                            <select id='harddriveo' class='form-control'>
+                                <option disabled selected>Hard Drive</option>
+                                <option value='6.5'>3.5" Hard Disk Drive HDD</option>
+                                <option value='0.7'>2.5" Hard Disk Drive HDD</option>
+                                <option value='0.6'>Solid State Drive SSD</option>
+                            </select>
+                        </div>
+                            
+                        
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">ส่วนของราคาค่าไฟฟ้า</h3>
+                      </div>
+                      <div class="panel-body">
+                <div class='row'>
+                    <div class='col-md-4'>
+                        <div class="input-group">
+                            <input type="text" title="150 หน่วยแรก" data-toggle="tooltip" data-placement="top" class="form-control" id="kafaiperunit" value='2.3488' placeholder="ค่าไฟฟ้า 150 หน่วยแรก">
+                            <div class="input-group-addon">บาท</div>
+                        </div>
+                    </div>
+                    <div class='col-md-4'>
+                        <div class="input-group">
+                            
+                            <input type="text" title="250 หน่วยต่อไป" data-toggle="tooltip" data-placement="top" class="form-control" id="kafaiperunit250" value='4.2218' placeholder="ค่าไฟฟ้า 250 หน่วยต่อไป">
+                            <div class="input-group-addon">บาท</div>
+                        </div>
+                    </div>
+                    <div class='col-md-4'>
+                        <div class="input-group">
+                            
+                            <input type="text" title="400 หน่วยขึ้นไป" data-toggle="tooltip" data-placement="top" class="form-control" id="kafaiperunit400" value='4.4217' placeholder="ค่าไฟฟ้า 400 หน่วยขึ้นไป">
+                            <div class="input-group-addon">บาท</div>
+                        </div>
+                    </div>
+                </div>
+                     
+                
+            
+                <div class='row'>
+                <div class='col-md-4'>
+                    <div class="input-group">
+                        <div class="input-group-addon">ปกติใช้ไฟ</div>
+                        <input type="text" class="form-control" id="unitbase" value='0' placeholder="ยูนิตที่เสียทุกเดือน">
+                        <div class="input-group-addon">ยูนิต</div> 
+                    </div>
+                    </div>
+                    <div class='col-md-4'>
+                        <div class="input-group">
+                            <div class="input-group-addon">ส่วนอื่น</div>
+                            <input type="text" class="form-control" id="other" value='0' placeholder="วัตต์โดยเฉลี่ยนของส่วนอื่นๆ">
+                            <div class="input-group-addon">วัตต์</div> 
+                    </div>
+                    </div>
+                    <div class='col-md-4'>
+                    <div class="input-group">
+                        <div class="input-group-addon">FT</div>
+                        <input type="text" class="form-control" id="ft" value='-4.80' placeholder="ค่า FT ต่อหน่วย">
+                        <div class="input-group-addon">สตางค์</div> 
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">แจกแจงรายการ</h3>
+                    </div>
+                   <div class="panel-body">
+                        <span>ค่า TDP ทั้งหมดรวม: </span> <span id='showtdp'> วัตต์</span><br>
+                        <span>Unit ที่ใช้ใน 1 วัน: </span> <span id='showunitperday'></span><br>
+                        <span>Unit ใน 30 วัน (*30): </span> <span id='showunitpermonth'> ยูนิต</span><br>
+                        <span>ค่า FT: </span> <span id='showft'>บาท</span><br>
+                        <span>ค่าบริการ: 38.22 บาท</span>
+                        <span id='yesornot'></span><br>
+                        <span>ภาษี: </span><span id='tax'></span><span>บาท</span><br>
+                        <span>ค่าไฟต่อเดือน: </span> <span class='result'> บาท</span><br><br>
+                        <p>!หมายเหตุ: ค่าไฟฟ้าคิดโดยยึดประเภท 1.2 เป็นหลัก (อัตราปกติปริมาณการใช้พลังงานไฟฟ้าเกินกว่า 150 หน่วยต่อเดือน)<br>
+                        อัตราการกินไฟ (TDP) ของ CPU อ้างอิงจาก เว็บ <a href='http://www.anandtech.com/show/8774/intel-haswell-low-power-cpu-review-core-i3-4130t-i5-4570s-and-i7-4790s-tested'>Anandtech</a><br>การคิดค่าไฟคอมพิวเตอร์อ้างอิงวิธีคิดจากเว็บ <a href='http://www.buildcomputers.net/pc-power-requirements.html'>Buildcomputers</a><br></p>
+                    </div>
+                </div>
+                <h3>ราคาต่อวัน:  <span class='resultperday'></span>บาท</h3>
+                <h3>ราคาต่ออาทิตย์:  <span class='resultperweek'></span>บาท</h3>
+                <h3 class='hl'>ราคาต่อเดือน:  <span class='result'></span>บาท</h3>
+                <h3>ราคาต่อปี:  <span class='resultperyear'></span>บาท</h3>
+            </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-8 col-md-offset-2'>
+                <p><a href='https://www.facebook.com/groups/bitcointhaiclub/'>สนับสนุนโดย กลุ่ม BitCoin Thai Club</a></p>
+                <p>Built with <span class='glyphicon glyphicon-heart'></span> by <a href='http://www.twitter.com/innneang'>@innneang</a> <a href='https://www.facebook.com/iinnnstagram'>(or visit Innn's Facebook)</a></p>
+            </div>
+            </div>
+        
+            
+        </div>
+
+
+
+    </footer>
+
+    <style>
+        *{
+            font-family: 'CS PraJad';
+        }
+        .panel, select, .input-group{
+           /* margin: 5px 0px !important;*/
+        }
+        .glyphicon-heart{
+            color:rgba(255, 0, 0, 0.53);
+            font-size: 1.3em;
+        }
+        footer{
+            background-color: #d6d6d6;
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+        li{
+            display: inline-block;
+        }
+        li>p{
+            text-align: center;
+        }
+        .glyphicon-plus{
+            font-size:0.8em;
+        }
+        .hl{
+            color:#eda2a2;
+        }
+        .removeappend{
+            cursor: pointer;
+        }
+    </style>
+<script src='calculatecpu.js'></script>
+    
+</body>
+</html>
+
+
+                    
