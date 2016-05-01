@@ -22,7 +22,7 @@
             var amount = $('#amount').val();
             var fts = $('#ft').val();
             var ft = fts/100;
-            var unitperday = tdp*hourperday*amount/1000;
+            var unitperday = tdp*hourperday/1000;
             var unitbase = $('#unitbase').val();
             var unitpermonthx = unitperday*30;
             var unitpermonth = parseInt(unitpermonthx) + parseInt(unitbase);
@@ -33,7 +33,7 @@
             $('#showft').text(ftpermonth.toString().concat('บาท'));
             if(unitpermonth <= 150){
                 $('#yesornot').text('ค่าไฟน้อยกว่า 150 ยูนิตต่อเดือน');
-                var result = (((unitpermonth*perunit)-ft)+38.22)*1.07;
+                var result = ((unitpermonth*perunit)-ft)*1.07;
                 $('.result').text(parseFloat(result).toFixed(2));
                 $('.resultperday').text(parseFloat(result/30).toFixed(2));
                 $('.resultperweek').text(parseFloat(result/4.285714286).toFixed(2));
@@ -41,9 +41,9 @@
                 $('#tax').text(parseFloat(((unitpermonth*perunit)-ft)*0.07).toFixed(2));
                 
             }
-            else if(unitpermonth >=250 && unitpermonth <400){
+            else if(unitpermonth >150 && unitpermonth <400){
                 $('#yesornot').text('ค่าไฟมากกว่า 250 ยูนิตต่อเดือน');
-                var result = (((unitpermonth*perunit)-ft)+38.22)*1.07;
+                var result = ((unitpermonth*perunit)-ft)*1.07;
                 var above150 = unitpermonth-150;
                 var result = (150*perunit + 4.2218*above150) - ft;
                 $('.result').text(parseFloat(result).toFixed(2));
@@ -55,8 +55,7 @@
             else if(unitpermonth >=400){
                 $('#yesornot').text('ค่าไฟมากกว่า 400 ยูนิตต่อเดือน');
                 var above400 = unitpermonth-400;
-                var result = (((150*perunit + perunit250*250 + perunit400*above400) - ft)+38.22)*1.07;
-                console.log(perunit);
+                var result = ((150*perunit + perunit250*250 + perunit400*above400) - ft)*1.07;
                 $('.result').text(parseFloat(result).toFixed(2));
                 $('.resultperday').text(parseFloat(result/30).toFixed(2));
                 $('.resultperweek').text(parseFloat(result/4.285714286).toFixed(2));
